@@ -4,7 +4,7 @@
 <html>
   
   <head>
-    <title>Articles | LlamaClothes</title>
+    <title>Articles | LlamaClothe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
