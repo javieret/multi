@@ -1,13 +1,8 @@
-<?php 
-session_start();
-session_destroy();
-?>
-
 <!doctype html>
 <html>
 
 <head>
-  <title>Logged out! | LlamaClothes</title>
+  <title>Account</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
@@ -15,8 +10,7 @@ session_destroy();
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
-   
-</head> 
+</head>
 
 <body>
   <div class="navbar navbar-fixed-top">
@@ -37,21 +31,20 @@ session_destroy();
             <li>
               <a href="../php/about.php">About</a> 
             </li>
-          </ul>            
-        </div>        
+          </ul>  
+        </div>
       </div>
     </div>
   </div>
   <div class="container">
-    <br><br><br>    
-      <h1 class="page-header" style="text-align:center">You have logged out.</h1>
-      <h1 style="text-align:center">Thank you!</h1>
-      <br>
-      <div id="imagen" style="text-align: center">
-        <img style="align: center" src="img/logout.png">
-        <br><br>
-        <a href="index.php" class="btn btn-info btn-large">Go to HOME...<br></a> 
-      </div>
-  </div>   
+    <div class="hero-unit hidden-phone">
+      <h1>Account Details</h1>
+      <p>Username</p>
+      <p></p>
+      <div class="btn-group open"></div>
+    </div>
+    <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a> 
+  </div>
 </body>
+
 </html>

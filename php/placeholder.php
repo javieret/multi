@@ -64,27 +64,37 @@ session_start();
       <br>
       <br>
     </div>
-    <div class="hero-unit hidden-phone">
-      <h1>Place Order</h1>
-      <p></p>
-      <div id="articles_selected">
-      </div>
-      <div id="contenedor_articulos"></div>
-
+	
+	<div class = "container">
+		<h1>Place Order</h1>
+		    <div class="hero-unit hidden-phone">
+     <h2> Address</h2>
       <div class="btn-group">
        <select class="span4" id="add_address">
        </select>
      </div>
-     <br><br>
-     <div id="contenedor_direcciones"></div>
+	  <hr>
+      <h2> Articles </h2>
+	  <br>
+	  <div id="contenedor_direcciones"></div>
+      <div id="articles_selected">
+      </div>
+      <div id="contenedor_articulos"></div>
+	<br>
+	<p id="total" style = "color: red">Total: </p>
+	<hr>
+	
+     
+     
 
-     <p id="total">Total: </p>
-     <br><br>
-
-    <!--  <button type="submit" class="btn btn-primary">Submit</button> -->
-     <a href=checarLog.php><img src=submit.png border=0 title=Submit></a>
+   
+    <!--  <button type="submit" class="btn btn-primary">Submit</button> <img src=submit.png border=0 title=Submit>-->
+	 
+     <a href=checarLog.php><button type="submit" class="btn btn-primary">Submit</button></a>
 
    </div>
+	</div>
+
    <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
    <div class="row main-features">
     <div class="span4"></div>

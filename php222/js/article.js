@@ -10,12 +10,12 @@ function getArticle(){
 			{	
 				$("#contenedor_articulos").append("<div class=span4>"+
 					"<div class=well>"+
-						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3> <h4>Price "+data[i].prize+"</h4>"+
+						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"<button onclick=deleteArticle("+data[i].id+")>Delete</button></h3>"+
 							//"<a button href=agregacar.php?id="+data[i].id+">BUY</button></div></div>");
 						"<a href=agregacar.php?id="+data[i].id+"><img src=vercarrito.gif border=0 title=Agregar al Carrito></a></div></div>");
 			}
 		}
-	});  // <button onclick=deleteArticle("+data[i].id+")>Delete</button>
+	});
 }
 
 function getArticle2(){
@@ -29,11 +29,11 @@ function getArticle2(){
 			{	
 				$("#contenedor_articulos").append("<div class=span4>"+
 					"<div class=well>"+
-						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3> <h4>Price "+data[i].prize+"</h4>"+
+						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"<button onclick=deleteArticle("+data[i].id+")>Delete</button></h3>"+
 							//"<a button href=agregacar.php?id="+data[i].id+">BUY</button></div></div>");
-						"<a href=agregacar2.php?id="+data[i].id+"><img src=vercarrito.gif border=0 title=Agregar al Carrito></a></div></div>");
+						"<a href=agregacar.php?id="+data[i].id+"><img src=vercarrito.gif border=0 title=Agregar al Carrito></a></div></div>");
 			}
-		}      // <button onclick=deleteArticle("+data[i].id+")>Delete</button>
+		}
 	});
 }
 
@@ -45,7 +45,7 @@ function getArticleDetail(){
 		success: function(data){
 			for (var i=0;i<data.length;i++) {	
 				//<select>
-				$("#articles_selected").append("<p>"+data[i].nombre+"    <span class=label>$"+data[i].prize+"</span></p>")
+				$("#articles_selected").append("<p>"+data[i].nombre+" - $"+data[i].prize+"</p>")
 				//<select id = cantidad> <option value="+"data[i].idproducto"+">2<option></select>
 				total = total + parseFloat(data[i].prize);
 			}

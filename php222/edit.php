@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!doctype html>
 <html>
@@ -13,10 +14,7 @@ session_start();
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
-
-  
-  <script src="js/article.js"></script>
-
+  <script src="js/edit.js"></script>
   <script src="js/index.js"></script>
   <style>
   .down{
@@ -32,7 +30,7 @@ session_start();
  </style>   
 </head> 
 
-<body onload="getArticle()"><!-- Este  codigo es para que se cargue los productos desde el principio -->
+<body onload="getUser(<?php echo $_SESSION['id']?>)"><!-- Este  codigo es para que se cargue los productos desde el principio -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -65,24 +63,29 @@ session_start();
           <li><a href="edit.php">Edit Profile</a></li>
           <li><a href="editAddress.php">Edit Address</a></li>
         </ul>
-
       </div>
     </div>
   </div>
+
   <div class="container">
-    <br><br><br>      
-    <div class="hero-unit hidden-phone">
-      <h1>Welcome to LlamaClothes!</h1>
-      <p>Do you want clothes?</p>
-      <p>
-        <a class="btn btn-large btn-inverse" href="signup.php"><span class="btn-label">Sign Up!</span></a> 
-      </p>
-    </div>      
-    <div class="row main-features">
-      <div id="contenedor_articulos"></div>
+    <br><br><br>
+    <div class="span6 well">
+    	<h3> Edit Information</h3>
+    	First Name
+    	<br>
+    	<input id="first" type="text" class="span6">
+    	Last Name
+    	<br>
+    	<input id="last" type="text" class="span6">
+    	Email
+    	<br>
+    	<input id="email" type="text" class="span6">
+    	<br>
+    	<input type="button" value="Edit Info" onclick="editInfo()"class="btn btn-success">
     </div>
   </div>
-  <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
+
+  <script type="text/javascript" src="http://localhost/multi/php/js/jquery.dropdown.js"></script>
   <script>$('.dropdown-toggle').dropdown()</script>
 </body>
 </html>

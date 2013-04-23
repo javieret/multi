@@ -75,14 +75,14 @@ session_start();
       <h1>Welcome to LlamaClothes!</h1>
       <p>Do you want clothes?</p>
       <p>
-        <a class="btn btn-large btn-inverse" href="signup.php"><span class="btn-label">Sign Up!</span></a> 
+        <a class="btn btn-large btn-inverse" href="#"><span class="btn-label">Sign Up!</span></a> 
       </p>
     </div>      
     <div class="row main-features">
       <div id="contenedor_articulos"></div>
     </div>
   </div>
-  <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
+  <script type="text/javascript" src="http://localhost/multi/php/js/jquery.dropdown.js"></script>
   <script>$('.dropdown-toggle').dropdown()</script>
 </body>
 </html>

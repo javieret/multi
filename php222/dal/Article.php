@@ -38,7 +38,7 @@ class Article {
 		$stmt = $db->prepare("SELECT * FROM article");
 		if($stmt->execute()){
 			while($resp = $stmt->fetch()){
-				$all_recs[]=array('nombre' => $resp['name'], 'id' => $resp['idarticle'], 'prize' => $resp['actualPrize'] );
+				$all_recs[]=array('nombre' => $resp['name'], 'id' => $resp['idarticle'] );
 			}
 		}else{
 			$all_recs[]=array('resp' =>0);
