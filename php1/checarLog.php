@@ -4,7 +4,7 @@ $log =0;
 if (!isset($_SESSION["name"])){ 
   $log =1;
 }else{ 
- header("Location: thankyou.php");
+ header("Location: gracias.php");
 }
 ?>
 
