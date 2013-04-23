@@ -1,11 +1,10 @@
-<?php
+<?php 
 session_start();
 ?>
 <!doctype html>
 <html>
-
 <head>
-  <title>Articles | LlamaClothes</title>
+  <title>Place Order | LlamaClothes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
@@ -13,9 +12,8 @@ session_start();
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
-
   <script src="js/article.js"></script>
-
+  <script src="js/address.js"></script>
   <script src="js/index.js"></script>
   <style>
   .down{
@@ -28,13 +26,10 @@ session_start();
   #btn_login{
     width:270px;
   }
-  </style>  
+  </style>
 
 </head>
-
-<!-- Comentario en una página HTML --> 
-
-<body onload="getArticle2()"><!-- Este  codigo es para que se cargue los productos desde el principio -->
+<body onload="getArticleDetail()"><!-- Este  codigo es para que se cargue las direcciones desde el principio -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -53,20 +48,13 @@ session_start();
             <li>
               <a href="../php/about.php">About</a> 
             </li>
-          </ul>            
+          </ul>  
         </div>
-        <?php if(!isset($_SESSION['name'])){
-          echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
-        }else{
-          echo "<a class='dropdown-toggle btn btn-success pull-right' data-dropdown=#dropdown-1 href=#>Bienvenido ".$_SESSION['name']."</a>";
-        }
-        ?>
-
-        <ul id="dropdown-1"  class="dropdown-menu">
-          <li><a href="logOut.php">Logout</a></li>
-          <li><a href="edit.php">Edit Profile</a></li>
-          <li><a href="editAddress.php">Edit Address</a></li>
-        </ul>         
+		<?php if(!isset($_SESSION['name']))
+				echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
+			  else
+			    echo "<a href=logOut.php><input type=button class='pull-right btn btn-success down' value=Logout></a>";
+		?>
       </div>
     </div>
   </div>
@@ -76,21 +64,42 @@ session_start();
       <br>
       <br>
     </div>
-    <div class="hero-unit hidden-phone">
-      <h1>Welcome to LlamaClothes!</h1>
-      <p>Do you want clothes?</p>
-      <p>
-        <a class="btn btn-large btn-inverse" href="#"><span class="btn-label">Sign Up!</span></a> 
-      </p>
-    </div>
-    <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
-    <div class="row main-features">   
+	
+	<div class = "container">
+		<h1>Place Order</h1>
+		    <div class="hero-unit hidden-phone">
+     <h2> Address</h2>
+      <div class="btn-group">
+       <select class="span4" id="add_address">
+       </select>
+     </div>
+	  <hr>
+      <h2> Articles </h2>
+	  <br>
+	  <div id="contenedor_direcciones"></div>
+      <div id="articles_selected">
+      </div>
       <div id="contenedor_articulos"></div>
-    </div>
+	<br>
+	<p id="total" style = "color: red">Total: </p>
+	<hr>
+	
+     
+     
 
+   
+    <!--  <button type="submit" class="btn btn-primary">Submit</button> <img src=submit.png border=0 title=Submit>-->
+	 
+     <a href=checarLog.php><button type="submit" class="btn btn-primary">Submit</button></a>
+
+   </div>
+	</div>
+
+   <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
+   <div class="row main-features">
+    <div class="span4"></div>
   </div>
-    <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
-  <script>$('.dropdown-toggle').dropdown()</script>
+</div>
 </body>
 
 </html>

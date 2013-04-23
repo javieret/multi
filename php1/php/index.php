@@ -71,7 +71,7 @@ session_start();
   </div>
   <div class="container">
     <br><br><br>      
-    <div class="hero-unit hidden-phone" style="background-image:url(img/fondo.jpg); background-repeat: no-repeat; color: white; text-shadow: black 0.1em 0.1em 0.2em">
+    <div class="hero-unit hidden-phone">
       <h1>Welcome to LlamaClothes!</h1>
       <p>Do you want clothes?</p>
       <p>
