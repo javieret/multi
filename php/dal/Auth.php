@@ -11,6 +11,7 @@ class Auth {
 	    if(crypt($pass, $row['password']) === $row['password'] AND $row['status']==1){
 	    	session_start();
 	    	$_SESSION['name']=$row['firstName'];
+	    	$_SESSION['id']=$row['idcustomer'];
 	        return True;
 	    }
 	}

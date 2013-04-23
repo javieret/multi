@@ -6,7 +6,6 @@ function getArticle(){
 		url:'bl/blArticle.php',
 		data:{'tipo':3},
 		success: function(data){
-		console.log(data);
 			for (var i=0;i<3;i++)
 			{	
 				$("#contenedor_articulos").append("<div class=span4>"+
@@ -26,7 +25,6 @@ function getArticle2(){
 		url:'bl/blArticle.php',
 		data:{'tipo':3},
 		success: function(data){
-		console.log(data);
 			for (var i=0;i<data.length;i++)
 			{	
 				$("#contenedor_articulos").append("<div class=span4>"+

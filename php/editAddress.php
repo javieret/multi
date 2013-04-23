@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!doctype html>
 <html>
@@ -13,28 +14,23 @@ session_start();
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
-
-  <script src="js/article.js"></script>
-
+  <script src="js/edit.js"></script>
   <script src="js/index.js"></script>
   <style>
   .down{
-    position: relative;
-    left: -20px
-  }
-  .popover-content{
-    padding:4px;
-  }
-  #btn_login{
-    width:270px;
-  }
-  </style>  
+   position: relative;
+   left: -20px
+ }
+ .popover-content{
+   padding:4px;
+ }
+ #btn_login{
+   width:270px;
+ }
+ </style>   
+</head> 
 
-</head>
-
-<!-- Comentario en una página HTML --> 
-
-<body onload="getArticle2()"><!-- Este  codigo es para que se cargue los productos desde el principio -->
+<body onload="getAddress()"><!-- Este  codigo es para que se cargue los productos desde el principio -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -66,29 +62,32 @@ session_start();
           <li><a href="logOut.php">Logout</a></li>
           <li><a href="edit.php">Edit Profile</a></li>
           <li><a href="editAddress.php">Edit Address</a></li>
-        </ul>         
+        </ul>
       </div>
     </div>
   </div>
+
   <div class="container">
-    <div id="espacio">
+    <br><br><br>
+    <div class="span6 well">
+    	<h3> Edit Address</h3>
+      <select id="select_add" class="span6" onchange="getAddressDetail()"></select>
       <br>
-      <br>
-      <br>
+    	Street
+    	<br>
+    	<input id="street" type="text" class="span6">
+    	Street 2
+    	<br>
+    	<input id="street2" type="text" class="span6">
+    	Zipcode
+    	<br>
+    	<input id="zip" type="text" class="span6">
+    	<br>
+    	<input type="button" value="Edit Info" onclick="updateAddress()"class="btn btn-success">
     </div>
-    <div class="hero-unit hidden-phone">
-      <h1>Welcome to LlamaClothes!</h1>
-      <p>Do you want clothes?</p>
-      <p>
-        <a class="btn btn-large btn-inverse" href="#"><span class="btn-label">Sign Up!</span></a> 
-      </p>
-    </div>
-    <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
-    <div class="row main-features">   
-      <div id="contenedor_articulos"></div>
-    </div>
-
   </div>
-</body>
 
+  <script type="text/javascript" src="http://localhost/multi/php/js/jquery.dropdown.js"></script>
+  <script>$('.dropdown-toggle').dropdown()</script>
+</body>
 </html>

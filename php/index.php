@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 
@@ -10,6 +13,7 @@
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+
   
   <script src="js/article.js"></script>
 
@@ -49,7 +53,19 @@
             </li>
           </ul>            
         </div>
-        <input  type="button" href="#" id="popover-link" class="pull-right btn btn-success down" rel="popover" value="Login">          
+        <?php if(!isset($_SESSION['name'])){
+          echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
+        }else{
+          echo "<a class='dropdown-toggle btn btn-success pull-right' data-dropdown=#dropdown-1 href=#>Bienvenido ".$_SESSION['name']."</a>";
+        }
+        ?>
+
+        <ul id="dropdown-1"  class="dropdown-menu">
+          <li><a href="logOut.php">Logout</a></li>
+          <li><a href="edit.php">Edit Profile</a></li>
+          <li><a href="editAddress.php">Edit Address</a></li>
+        </ul>
+
       </div>
     </div>
   </div>
@@ -65,6 +81,8 @@
     <div class="row main-features">
       <div id="contenedor_articulos"></div>
     </div>
-  </div>   
+  </div>
+  <script type="text/javascript" src="http://localhost/multi/php/js/jquery.dropdown.js"></script>
+  <script>$('.dropdown-toggle').dropdown()</script>
 </body>
 </html>

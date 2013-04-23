@@ -89,6 +89,3 @@ function deleteAddress(address){
 	});
 }
 
-
-function editAddress(id){
-}

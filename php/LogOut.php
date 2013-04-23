@@ -1,12 +1,6 @@
 <?php 
 session_start();
-$log =0;
-if (isset($_SESSION["name"])){ 
-  session_destroy();
-  
-}else{ 
- header("Location: placeholder.php");
-}
+session_destroy();
 ?>
 
 <!DOCTYPE html>
