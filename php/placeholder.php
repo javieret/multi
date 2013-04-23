@@ -15,6 +15,7 @@ session_start();
   <script src="js/article.js"></script>
   <script src="js/address.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/placeholder.js"></script>
   <style>
   .down{
     position: relative;
@@ -50,55 +51,51 @@ session_start();
             </li>
           </ul>  
         </div>
-		<?php if(!isset($_SESSION['name']))
-				echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
-			  else
-			    echo "<a href=logOut.php><input type=button class='pull-right btn btn-success down' value=Logout></a>";
-		?>
-      </div>
-    </div>
+        <?php if(!isset($_SESSION['name']))
+        echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
+        else
+         echo "<a href=logOut.php><input type=button class='pull-right btn btn-success down' value=Logout></a>";
+       ?>
+     </div>
+   </div>
+ </div>
+ <div class="container">
+  <div id="espacio">
+    <br>
+    <br>
+    <br>
   </div>
-  <div class="container">
-    <div id="espacio">
-      <br>
-      <br>
-      <br>
-    </div>
-	
-	<div class = "container">
-		<h1>Place Order</h1>
-		    <div class="hero-unit hidden-phone">
+
+  <div class = "container">
+    <h1>Place Order</h1>
+    <div class="hero-unit hidden-phone">
      <h2> Address</h2>
-      <div class="btn-group">
+     <div class="btn-group">
        <select class="span4" id="add_address">
        </select>
      </div>
-	  <hr>
-      <h2> Articles </h2>
-	  <br>
-	  <div id="contenedor_direcciones"></div>
-      <div id="articles_selected">
-      </div>
-      <div id="contenedor_articulos"></div>
-	<br>
-	<p id="total" style = "color: red">Total: </p>
-	<hr>
-	
-     
-     
+     <hr>
+     <h2> Articles </h2>
+     <br>
+     <div id="contenedor_direcciones"></div>
+     <div id="articles_selected">
+     </div>
+     <div id="contenedor_articulos"></div>
+     <br>
+     <p id="total" style = "color: red">Total: </p>
+     <hr>
 
-   
-    <!--  <button type="submit" class="btn btn-primary">Submit</button> <img src=submit.png border=0 title=Submit>-->
-	 
+     <!--  <button type="submit" class="btn btn-primary">Submit</button> <img src=submit.png border=0 title=Submit>-->
+
      <a href=checarLog.php><button type="submit" class="btn btn-primary">Submit</button></a>
 
    </div>
-	</div>
+ </div>
 
-   <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
-   <div class="row main-features">
-    <div class="span4"></div>
-  </div>
+ <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
+ <div class="row main-features">
+  <div class="span4"></div>
+</div>
 </div>
 </body>
 

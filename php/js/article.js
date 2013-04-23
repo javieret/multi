@@ -45,7 +45,7 @@ function getArticleDetail(){
 		success: function(data){
 			for (var i=0;i<data.length;i++) {	
 				//<select>
-				$("#articles_selected").append("<p>"+data[i].nombre+"    <span class=label>$"+data[i].prize+"</span></p>")
+				$("#articles_selected").append("<p>"+data[i].nombre+"    <span class=label>$"+data[i].prize+"</span> <input class='btn btn-danger' onclick=(deleteCar("+data[i].id+")) type=button value=X></p>")
 				//<select id = cantidad> <option value="+"data[i].idproducto"+">2<option></select>
 				total = total + parseFloat(data[i].prize);
 			}
