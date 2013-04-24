@@ -10,7 +10,7 @@ function getArticle(){
 			{	
 				$("#contenedor_articulos").append("<div class=span4>"+
 					"<div class=well>"+
-						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3> <h4>Price <span class=label>"+data[i].prize+"</span></h4>"+
+						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3> <h4>Price "+data[i].prize+"</h4>"+
 							//"<a button href=agregacar.php?id="+data[i].id+">BUY</button></div></div>");
 						"<a href=agregacar.php?id="+data[i].id+"><img src=vercarrito.gif border=0 title=Agregar al Carrito></a></div></div>");
 			}
@@ -29,7 +29,7 @@ function getArticle2(){
 			{	
 				$("#contenedor_articulos").append("<div class=span4>"+
 					"<div class=well>"+
-						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3> <h4>Price <span class=label>"+data[i].prize+"</span></h4> "+
+						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3> <h4>Price "+data[i].prize+"</h4>"+
 							//"<a button href=agregacar.php?id="+data[i].id+">BUY</button></div></div>");
 						"<a href=agregacar2.php?id="+data[i].id+"><img src=vercarrito.gif border=0 title=Agregar al Carrito></a></div></div>");
 			}

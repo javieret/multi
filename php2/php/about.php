@@ -42,7 +42,7 @@
               <a href="../php/placeholder.php">Shop Cart</a> 
             </li>
             <li>
-             <a href="../php/edit.php">Account</a> 
+              <a href="../php/account.php">Account</a> 
             </li>
             <li>
               <a href="../php/about.php">About</a> 

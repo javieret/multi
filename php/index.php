@@ -46,7 +46,7 @@ session_start();
               <a href="../php/placeholder.php">Shop Cart</a> 
             </li>
             <li>
-              <a href="../php/account.php">Account</a> 
+              <a href="../php/edit.php">Account</a> 
             </li>
             <li>
               <a href="../php/about.php">About</a> 
@@ -64,6 +64,7 @@ session_start();
           <li><a href="logOut.php">Logout</a></li>
           <li><a href="edit.php">Edit Profile</a></li>
           <li><a href="editAddress.php">Edit Address</a></li>
+		  <li><a href="addAddress.php">Add Address</a></li>
         </ul>
 
       </div>

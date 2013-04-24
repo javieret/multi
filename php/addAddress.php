@@ -1,12 +1,12 @@
 <?php
 session_start();
-
 ?>
+
 <!doctype html>
 <html>
 
 <head>
-  <title>Articles | LlamaClothes</title>
+  <title>Add address | LlamaClothes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
@@ -14,8 +14,11 @@ session_start();
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
-  <script src="js/edit.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/jquery-1.9.1.min.js"></script>
+  
+  <script src="js/address.js"></script>
+  
+ 
   <style>
   .down{
    position: relative;
@@ -30,7 +33,7 @@ session_start();
  </style>   
 </head> 
 
-<body onload="getUser(<?php echo $_SESSION['id']?>)"><!-- Este  codigo es para que se cargue los productos desde el principio -->
+<body>
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -44,14 +47,14 @@ session_start();
               <a href="../php/placeholder.php">Shop Cart</a> 
             </li>
             <li>
-              <a href="../php/edit.php">Account</a> 
+              <a href="../php/account.php">Account</a> 
             </li>
             <li>
               <a href="../php/about.php">About</a> 
             </li>
           </ul>            
-        </div>
-        <?php if(!isset($_SESSION['name'])){
+        </div> 
+			<?php if(!isset($_SESSION['name'])){
           echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
         }else{
           echo "<a class='dropdown-toggle btn btn-success pull-right' data-dropdown=#dropdown-1 href=#>Bienvenido ".$_SESSION['name']."</a>";
@@ -64,29 +67,52 @@ session_start();
           <li><a href="editAddress.php">Edit Address</a></li>
 		  <li><a href="addAddress.php">Add Address</a></li>
         </ul>
+		
       </div>
     </div>
   </div>
-
   <div class="container">
-    <br><br><br>
-    <div class="span6 well">
-    	<h3> Edit Information</h3>
-    	First Name
-    	<br>
-    	<input id="first" type="text" class="span6">
-    	Last Name
-    	<br>
-    	<input id="last" type="text" class="span6">
-    	Email
-    	<br>
-    	<input id="email" type="text" class="span6">
-    	<br>
-    	<input type="button" value="Edit Info" onclick="editInfo()"class="btn btn-success">
-    </div>
+    <br><br><br>      
+    <div class="hero-unit hidden-phone">
+      <h1>Add address:</h1>
+      <hr>
+      <form>
+          <table style="text-align: right">
+            <thead>
+              <tr>
+                <th>Country:</th><img src="img/address.png" style="float: right; width: 24%">
+                <th><select id="country_select"></select></th>
+              </tr>
+              <tr>
+                <th>State:</th>
+                <th><select id="state_select"></select></th>
+              </tr>
+              <tr>
+                <th>Address Type:</th>
+                <th><select id="type"></select></th>
+              </tr>
+              <tr>
+                <th>Street 1:</th>
+                <th><input id='street' type="text" placeholder="Street 1"></th>
+              </tr>
+              <tr>
+                <th>Street 2:</th>
+                <th><input id='street2' type="text" placeholder="Street 2"></th>
+              </tr>
+              <tr>
+                <th>Zipcode:</th>
+                <th><input id='zip' type="text" placeholder="Zipcode"></th>
+              </tr>
+              <tr>
+                <th></th>
+                <th><input class="btn btn-block btn-warning btn-small" id='btn_addcustomer' type="button" value="Add" onclick="addAddress()"></th>
+              </tr>
+            </thead>
+          </table>         
+      </form>
+    </div> 
   </div>
-
-  <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
-  <script>$('.dropdown-toggle').dropdown()</script>
+<script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
+  <script>$('.dropdown-toggle').dropdown()</script>  
 </body>
 </html>

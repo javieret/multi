@@ -44,26 +44,18 @@ session_start();
               <a href="../php/placeholder.php">Shop Cart</a> 
             </li>
             <li>
-             <a href="../php/edit.php">Account</a> 
+              <a href="../php/account.php">Account</a> 
             </li>
             <li>
               <a href="../php/about.php">About</a> 
             </li>
           </ul>  
         </div>
-         <?php if(!isset($_SESSION['name'])){
-          echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
-        }else{
-          echo "<a class='dropdown-toggle btn btn-success pull-right' data-dropdown=#dropdown-1 href=#>Bienvenido ".$_SESSION['name']."</a>";
-        }
-        ?>
-
-        <ul id="dropdown-1"  class="dropdown-menu">
-          <li><a href="logOut.php">Logout</a></li>
-          <li><a href="edit.php">Edit Profile</a></li>
-          <li><a href="editAddress.php">Edit Address</a></li>
-		  <li><a href="addAddress.php">Add Address</a></li>
-        </ul>
+        <?php if(!isset($_SESSION['name']))
+        echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
+        else
+         echo "<a href=logOut.php><input type=button class='pull-right btn btn-success down' value=Logout></a>";
+       ?>
      </div>
    </div>
  </div>
@@ -105,8 +97,6 @@ session_start();
   <div class="span4"></div>
 </div>
 </div>
- <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
-<script>$('.dropdown-toggle').dropdown()</script>
 </body>
 
 </html>

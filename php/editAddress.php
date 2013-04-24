@@ -62,6 +62,7 @@ session_start();
           <li><a href="logOut.php">Logout</a></li>
           <li><a href="edit.php">Edit Profile</a></li>
           <li><a href="editAddress.php">Edit Address</a></li>
+		   <li><a href="addAddress.php">Add Address</a></li>
         </ul>
       </div>
     </div>
@@ -87,7 +88,7 @@ session_start();
     </div>
   </div>
 
-  <script type="text/javascript" src="http://localhost/multi/php/js/jquery.dropdown.js"></script>
+  <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
   <script>$('.dropdown-toggle').dropdown()</script>
 </body>
 </html>

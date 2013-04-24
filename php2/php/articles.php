@@ -48,7 +48,7 @@ session_start();
               <a href="../php/placeholder.php">Shop Cart</a> 
             </li>
             <li>
-             <a href="../php/edit.php">Account</a> 
+              <a href="../php/account.php">Account</a> 
             </li>
             <li>
               <a href="../php/about.php">About</a> 
@@ -66,7 +66,6 @@ session_start();
           <li><a href="logOut.php">Logout</a></li>
           <li><a href="edit.php">Edit Profile</a></li>
           <li><a href="editAddress.php">Edit Address</a></li>
-		   <li><a href="addAddress.php">Add Address</a></li>
         </ul>         
       </div>
     </div>
@@ -77,9 +76,12 @@ session_start();
       <br>
       <br>
     </div>
-    <div class="hero-unit hidden-phone"style="background-image:url(img/ropa.jpg); background-repeat: no-repeat; color: white; text-shadow: black 0.1em 0.1em 0.2em">
-      <h1>Articles:</h1>
-      
+    <div class="hero-unit hidden-phone">
+      <h1>Welcome to LlamaClothes!</h1>
+      <p>Do you want clothes?</p>
+      <p>
+        <a class="btn btn-large btn-inverse" href="#"><span class="btn-label">Sign Up!</span></a> 
+      </p>
     </div>
     <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
     <div class="row main-features">   

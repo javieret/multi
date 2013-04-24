@@ -14,27 +14,25 @@ session_start();
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
 
+  
   <script src="js/article.js"></script>
 
   <script src="js/index.js"></script>
   <style>
   .down{
-    position: relative;
-    left: -20px
-  }
-  .popover-content{
-    padding:4px;
-  }
-  #btn_login{
-    width:270px;
-  }
-  </style>  
+   position: relative;
+   left: -20px
+ }
+ .popover-content{
+   padding:4px;
+ }
+ #btn_login{
+   width:270px;
+ }
+ </style>   
+</head> 
 
-</head>
-
-<!-- Comentario en una página HTML --> 
-
-<body onload="getArticle2()"><!-- Este  codigo es para que se cargue los productos desde el principio -->
+<body onload="getArticle()"><!-- Este  codigo es para que se cargue los productos desde el principio -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -48,7 +46,7 @@ session_start();
               <a href="../php/placeholder.php">Shop Cart</a> 
             </li>
             <li>
-             <a href="../php/edit.php">Account</a> 
+              <a href="../php/account.php">Account</a> 
             </li>
             <li>
               <a href="../php/about.php">About</a> 
@@ -66,29 +64,25 @@ session_start();
           <li><a href="logOut.php">Logout</a></li>
           <li><a href="edit.php">Edit Profile</a></li>
           <li><a href="editAddress.php">Edit Address</a></li>
-		   <li><a href="addAddress.php">Add Address</a></li>
-        </ul>         
+        </ul>
+
       </div>
     </div>
   </div>
   <div class="container">
-    <div id="espacio">
-      <br>
-      <br>
-      <br>
-    </div>
-    <div class="hero-unit hidden-phone"style="background-image:url(img/ropa.jpg); background-repeat: no-repeat; color: white; text-shadow: black 0.1em 0.1em 0.2em">
-      <h1>Articles:</h1>
-      
-    </div>
-    <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
-    <div class="row main-features">   
+    <br><br><br>      
+    <div class="hero-unit hidden-phone" style="background-image:url(img/fondo.jpg); background-repeat: no-repeat; color: white; text-shadow: black 0.1em 0.1em 0.2em">
+      <h1>Welcome to LlamaClothes!</h1>
+      <p>Do you want clothes?</p>
+      <p>
+        <a class="btn btn-large btn-inverse" href="signup.php"><span class="btn-label">Sign Up!</span></a> 
+      </p>
+    </div>      
+    <div class="row main-features">
       <div id="contenedor_articulos"></div>
     </div>
-
   </div>
-    <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
+  <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
   <script>$('.dropdown-toggle').dropdown()</script>
 </body>
-
 </html>
