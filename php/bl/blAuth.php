@@ -4,7 +4,7 @@
 	$info = $get ->getCredentials($_POST['user'], $_POST['pass']);
 
 	if($_POST['hdn']=="compra" and $info){
-		header("Location: ../thankyou.php");
+		header("Location: ../placeholder.php");
 	}else if($_POST['hdn']=="index"){
 		header("Location: ../index.php");
 	}else if($_POST['hdn']){
