@@ -125,7 +125,7 @@ session_start();
       <h3 class="rojo">Place Order</h3>
       <div id="cart_detail">
       </div>
-      Address: <select class="span4" id="add_address"></select>
+      Address: <select class="span4" id="add_address" ></select>
       <br>
       <div class=row-fluid><div class=span3></div><div class=span3></div><div class=span3></div><div class=span3><a href=checarLog.php><button type="submit" class="btn btn-success">Checkout</button></a></div></div>
     </div>
@@ -136,7 +136,7 @@ session_start();
     <div class="span4"></div>
   </div>
 </div>
-<script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
+<script type="text/javascript" src="http://localhost/multi/php/js/jquery.dropdown.js"></script>
 <script>$('.dropdown-toggle').dropdown()</script>
 </body>
 

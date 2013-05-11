@@ -139,7 +139,7 @@ session_start();
   </div>
 
 </div>
-<script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
+<script type="text/javascript" src="http://localhost/multi/php/js/jquery.dropdown.js"></script>
 <script>$('.dropdown-toggle').dropdown()</script>
 </body>
 

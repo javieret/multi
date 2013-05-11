@@ -1,4 +1,5 @@
 <?php
+Session_start();
 include ("../dal/Address.php");
 $get = new Address();
 if($_POST['tipo']==1){
@@ -35,7 +36,7 @@ if($_POST['tipo']==3){
 }
 
 if($_POST['tipo']==4){
-	$info = $get -> getAddressDetail($_POST['id']);
+	$info = $get -> getAddressDetail($_SESSION['id']);
 	echo $info;
 }
 

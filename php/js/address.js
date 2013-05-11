@@ -77,6 +77,22 @@ function getAddress(){
 	});
 }
 
+function getAddressDetail(){
+	$("#contenedor_direcciones").empty();
+	$.ajax({
+		type:"POST",
+		url:'bl/blAddress.php',
+		data:{'tipo':4},
+		success: function(data){
+		console.log(data);
+			for (var i=0;i<data.length;i++)
+			{
+				$("#add_address").append("<option>"+data[i].street+" "+data[i].street2+"</option>");
+			}
+		}
+	});
+}
+
 function deleteAddress(address){
 	$.ajax({
 		type:"POST",

@@ -15,7 +15,7 @@ class Address {
 		$stmt->bindParam(':street',$street);
 		$stmt->bindParam(':street2',$street2);
 		$stmt->bindParam(':zip',$zip);
-		$stmt->bindParam(':user',$user);
+		$stmt->bindParam(':user',$_SESSION['id']);
 		$stmt->bindParam(':status',$status);
 		if($stmt->execute()){
 			return True;
@@ -56,7 +56,7 @@ class Address {
 		include("conex.php");
 		$db = Conectarse();
 		$all_recs = array();
-		$stmt = $db->prepare("SELECT * FROM address where status_address = 1 and idAddress= ?");
+		$stmt = $db->prepare("SELECT * FROM address where status_address = 1 and idcustomer= ?");
 		if($stmt->execute(array($id))){
 			while($resp = $stmt->fetch()){
 				$all_recs[]=array('street' => $resp['street'], 'id' => $resp['idAddress'], 'street2' => $resp['street2'], 'zip' => $resp['zipcode'] );

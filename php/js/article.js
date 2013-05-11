@@ -58,7 +58,7 @@ function getArticleDetail(){
 			$("#cart_detail").append("<div class=row-fluid><div class=span3></div><div class=span3></div><div class=span3></div><div class=span3><p><br>Total: $"+total+"</p></div>");
 		}
 	});
-	getAddress();
+	getAddressDetail();
 }
 
 function addArticle(){

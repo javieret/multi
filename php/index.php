@@ -199,7 +199,7 @@ input:-moz-placeholder { font-size:28px;position:relative;top:2px; }
       <div id="contenedor_articulos"></div>
     </div>
   </div>
-  <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
+  <script type="text/javascript" src="http://localhost/multi/php/js/jquery.dropdown.js"></script>
   <script>$('.dropdown-toggle').dropdown()</script>
 </body>
 </html>
