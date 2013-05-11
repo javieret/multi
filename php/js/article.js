@@ -9,13 +9,14 @@ function getArticle(){
 			for (var i=0;i<3;i++)
 			{	
 				$("#contenedor_articulos").append("<div class=span4>"+
-					"<div class=well>"+
-						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3> <h4>Price <span class=label>"+data[i].prize+"</span></h4>"+
-							//"<a button href=agregacar.php?id="+data[i].id+">BUY</button></div></div>");
-						"<a href=agregacar.php?id="+data[i].id+"><img src=vercarrito.gif border=0 title=Agregar al Carrito></a></div></div>");
+					"<div class='well products_div'>"+
+						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3>"+
+						"<img class=center_img src=http://i.americanapparel.net/storefront/photos/morephotos/2406/2406_0"+(i+1)+"t.jpg><br>"+
+						"<h4>Price <span class=label>$ "+data[i].prize+"</span></h4>"+
+						"<a href=agregacar.php?id="+data[i].id+"><button class='btn btn-success'><img src=vercarrito.gif border=0 title=Agregar al Carrito> Add To Cart</button></a></div></div>");
 			}
 		}
-	});  // <button onclick=deleteArticle("+data[i].id+")>Delete</button>
+	});
 }
 
 function getArticle2(){
@@ -29,11 +30,12 @@ function getArticle2(){
 			{	
 				$("#contenedor_articulos").append("<div class=span4>"+
 					"<div class=well>"+
-						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3> <h4>Price <span class=label>"+data[i].prize+"</span></h4> "+
-							//"<a button href=agregacar.php?id="+data[i].id+">BUY</button></div></div>");
-						"<a href=agregacar2.php?id="+data[i].id+"><img src=vercarrito.gif border=0 title=Agregar al Carrito></a></div></div>");
+						"<h3 id=article"+data[i].id+" class=rojo>"+data[i].nombre+"</h3>"+
+						"<img class=center_img src=http://i.americanapparel.net/storefront/photos/morephotos/2406/2406_0"+(i+1)+"t.jpg><br>"+
+						"<h4>Price <span class=label>$ "+data[i].prize+"</span></h4>"+
+						"<a href=agregacar2.php?id="+data[i].id+"><button class='btn btn-success'><img src=vercarrito.gif border=0 title=Agregar al Carrito> Add To Cart</button></a></div></div>");
 			}
-		}      // <button onclick=deleteArticle("+data[i].id+")>Delete</button>
+		}  
 	});
 }
 
@@ -43,13 +45,17 @@ function getArticleDetail(){
 		url:'bl/blArticle.php',
 		data:{'tipo':4},
 		success: function(data){
-			for (var i=0;i<data.length;i++) {	
-				//<select>
-				$("#articles_selected").append("<p>"+data[i].nombre+"    <span class=label>$"+data[i].prize+"</span> <input class='btn btn-danger' onclick=(deleteCar("+data[i].id+")) type=button value=X></p>")
-				//<select id = cantidad> <option value="+"data[i].idproducto"+">2<option></select>
-				total = total + parseFloat(data[i].prize);
+			$("#cart_detail").append("<div class=row-fluid><div class=span3><span class='label label-success'>Products</span></div><div class=span3><span class='label label-success'>Quantity</span></div><div class=span3><span class='label label-success'>Delete Product</span></div><div class=span3><span class='label label-success'>Price</span></div></div><hr>");
+			for (var i=0;i<data.length;i++) {
+				$("#cart_detail").append("<div class=row-fluid><div class=span3>"+
+					"<p><img class=center_img src=http://i.americanapparel.net/storefront/photos/morephotos/2406/2406_0"+(i+1)+"t.jpg><br><small>"+data[i].nombre+"</small></p></div>"+
+					"<div class=span3>"+
+					"<select class=span3><option>1</option></select></div>"+
+					"<div class=span3><input class='btn btn-danger' onclick=(deleteCar("+data[i].id+")) type=button value='X Delete Product'></div>"+
+					"<div class=span3><p>$"+data[i].prize+"</p></div></div><hr>");
+					total = total + parseFloat(data[i].prize);
 			}
-			$("#total").append("$"+ total);
+			$("#cart_detail").append("<div class=row-fluid><div class=span3></div><div class=span3></div><div class=span3></div><div class=span3><p><br>Total: $"+total+"</p></div>");
 		}
 	});
 	getAddress();

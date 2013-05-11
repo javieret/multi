@@ -7,13 +7,22 @@
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+  <style>
+    body{
+    font-family: 'Open Sans', sans-serif;
+  }
+  a{
+    color:white!important;
+  }
+  </style>
 </head>
 
 <body>
-  <div class="navbar navbar-fixed-top">
+  <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <a class="brand" href="../php">LlamaClothes</a>

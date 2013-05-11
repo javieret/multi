@@ -7,14 +7,16 @@
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
   <script src="js/jquery-1.9.1.min.js"></script>
   <script src="js/customer.js"></script>
-  
- 
   <style>
+    body{
+    font-family: 'Open Sans', sans-serif;
+  }
   .down{
    position: relative;
    left: -20px
@@ -25,11 +27,14 @@
  #btn_login{
    width:270px;
  }
- </style>   
+ a{
+  color:white!important;
+}
+</style>   
 </head> 
 
 <body>
-  <div class="navbar navbar-fixed-top">
+  <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <a class="brand" href="../php">LlamaClothes</a>
@@ -59,36 +64,36 @@
       <hr>
 
       <form>
-          <table style="text-align: right">
-            <thead>
-              <tr>
-                <th>First Name:</th><img src="img/create_account.png" style="float: right; width: 24%">
-                <th><input class="input-xxlarge" type="text" name="lname" placeholder="Juan" id="first"></th>
-              </tr>
-              <tr>
-                <th>Last Name:</th>
-                <th><input class="input-xxlarge" type="text" name="lname" placeholder="Cordova" id="last"></th>
-              </tr>
-              <tr>
-                <th>Email:</th>
-                <th><input class="input-xxlarge" type="email" name="lname" placeholder="example@mail.com" id="email"></th>
-              </tr>
-              <tr>
-                <th>Username:</th>
-                <th><input class="input-xxlarge" type="text" name="lname" placeholder="username" id="user"></th>
-              </tr>
-              <tr>
-                <th>Password:</th>
-                <th><input class="input-xxlarge" type="password" name="lname" placeholder="password" id="pass"></th>
-              </tr>
-              <tr>
-                <th></th>
-                <th><input class="btn btn-block btn-warning btn-small" id='btn_addcustomer' type="button" value="SUBMIT" onclick="addCustomer()">
+        <table style="text-align: right">
+          <thead>
+            <tr>
+              <th>First Name:</th><img src="img/create_account.png" style="float: right; width: 24%">
+              <th><input class="input-xxlarge" type="text" name="lname" placeholder="Juan" id="first"></th>
+            </tr>
+            <tr>
+              <th>Last Name:</th>
+              <th><input class="input-xxlarge" type="text" name="lname" placeholder="Cordova" id="last"></th>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <th><input class="input-xxlarge" type="email" name="lname" placeholder="example@mail.com" id="email"></th>
+            </tr>
+            <tr>
+              <th>Username:</th>
+              <th><input class="input-xxlarge" type="text" name="lname" placeholder="username" id="user"></th>
+            </tr>
+            <tr>
+              <th>Password:</th>
+              <th><input class="input-xxlarge" type="password" name="lname" placeholder="password" id="pass"></th>
+            </tr>
+            <tr>
+              <th></th>
+              <th><input class="btn btn-block btn-warning btn-small" id='btn_addcustomer' type="button" value="SUBMIT" onclick="addCustomer()">
               </tr>
             </thead>
           </table>         
-      </form>
-    </div> 
-  </div>   
-</body>
-</html>
+        </form>
+      </div> 
+    </div>   
+  </body>
+  </html>
