@@ -2,7 +2,7 @@
 	include ("../dal/Order.php");
 	$get = new Order();
 	if($_POST['tipo']==1){
-		$info = $get -> addOrder($_POST['address'],$_POST['articles']);
+		$info = $get -> addOrder($_POST['add_address'],$_POST['articles']);
 		if($info){
 			echo "Si se inserto";
 		}else{

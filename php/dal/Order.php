@@ -118,7 +118,6 @@ class Order {
 			$stmt->bindParam(':idOrder',$id);
 			$stmt->bindParam(':detailquantity',$quantity);
 			$stmt->execute();
-			print_r($stmt->debugDumpParams());
 		}
 		return True;
 	}
