@@ -48,7 +48,7 @@ class blAddress{
 		}
 
 		if($_POST['tipo']==5){
-			if($_POST['zip']>=10000){
+			if($_POST['zip']>=10000 && strlen($_POST['street'])>0 && strlen($_POST['street2'])>0){
 				$info = $get -> editddress($_POST['street'], $_POST['street2'], $_POST['zip'], $_POST['id']);
 				echo $info;
 			}else{
