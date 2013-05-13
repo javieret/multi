@@ -17,7 +17,7 @@ session_start();
   <script src="js/article.js"></script>
   <script src="js/index.js"></script>
   <style>
-    body{
+  body{
     font-family: 'Open Sans', sans-serif;
   }
   .down{
@@ -78,8 +78,11 @@ session_start();
     -box-shadow: 0px 1px 2px #362E30;
   }
   a{
-  color:white!important;
-}
+    color:white!important;
+  }
+  .dropdown-menu a{
+    color:black!important;
+  }
   </style>  
 
 </head>

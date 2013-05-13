@@ -67,6 +67,9 @@ h3.rojo:after {
 a{
   color:white!important;
 }
+.dropdown-menu a{
+  color:black!important;
+}
 </style>   
 </head> 
 

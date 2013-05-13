@@ -51,7 +51,9 @@ if (!isset($_SESSION["name"])){
     margin-bottom: 15px;
     padding: 7px 9px;
   }
-
+  .dropdown-menu a{
+    color:black!important;
+  }
   </style>
 </head>
 <body>

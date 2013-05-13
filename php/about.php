@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 
@@ -33,6 +36,9 @@
   a{
   color:white!important;
 }
+.dropdown-menu a{
+  color:black!important;
+}
   </style>   
 </head>
 
@@ -57,7 +63,19 @@
             </li>
           </ul>  
         </div>
-        <input  type="button" href="#" id="popover-link" class="pull-right btn btn-success down" rel="popover" value="Login">
+        <?php if(!isset($_SESSION['name'])){
+          echo "<input type=button href=# id=popover-link class='pull-right btn btn-success down' rel=popover value=Login>";
+        }else{
+          echo "<a class='dropdown-toggle btn btn-success pull-right' data-dropdown=#dropdown-1 href=#>Bienvenido ".$_SESSION['name']."</a>";
+        }
+        ?>
+        <ul id="dropdown-1"  class="dropdown-menu">
+          <li><a href="logOut.php">Logout</a></li>
+          <li><a href="edit.php">Edit Profile</a></li>
+          <li><a href="editAddress.php">Edit Address</a></li>
+          <li><a href="addAddress.php">Add Address</a></li>
+        </ul>
+
       </div>
     </div>
   </div>
@@ -75,5 +93,7 @@
     </ul> 
     <div id="seleccion_menu"></div>   
   </body>
+  <script type="text/javascript" src="http://localhost/multicapas_bien/php/js/jquery.dropdown.js"></script>
+<script>$('.dropdown-toggle').dropdown()</script>
 
   </html>

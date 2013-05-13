@@ -12,11 +12,14 @@
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
   <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
   <style>
-    body{
+  body{
     font-family: 'Open Sans', sans-serif;
   }
   a{
     color:white!important;
+  }
+  .dropdown-menu a{
+    color:black!important;
   }
   </style>
   

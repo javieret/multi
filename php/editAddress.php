@@ -18,7 +18,7 @@ session_start();
   <script src="js/edit.js"></script>
   <script src="js/index.js"></script>
   <style>
-    body{
+  body{
     font-family: 'Open Sans', sans-serif;
   }
   .down{
@@ -66,6 +66,9 @@ h3.rojo:after {
 }
 a{
   color:white!important;
+}
+.dropdown-menu a{
+  color:black!important;
 }
 </style>   
 </head> 

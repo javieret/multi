@@ -135,6 +135,9 @@ a{
   width: 120px;
   margin:0px auto;
 }
+.dropdown-menu a{
+  color:black!important;
+}
 ::-webkit-input-placeholder { font-size:28px;position:relative;top:2px; }
 ::-moz-placeholder { font-size:28px;position:relative;top:2px; } 
 input:-moz-placeholder { font-size:28px;position:relative;top:2px; }
