@@ -30,7 +30,7 @@ function getAddress(){
 	$.ajax({
 		type:"POST",
 		url:'bl/blAddress.php',
-		data:{'tipo':3},
+		data:{'tipo':4},
 		success: function(data){
 			for (var i=0;i<data.length;i++)
 			{
@@ -48,7 +48,7 @@ function getAddressDetail(){
 	$.ajax({
 		type:"POST",
 		url:'bl/blAddress.php',
-		data:{'tipo':4, 'id':id},
+		data:{'tipo':6, 'id':id},
 		success: function(data){
 			$("#street").val(data[0].street);
 			$("#street2").val(data[0].street2);

@@ -40,6 +40,11 @@ if($_POST['tipo']==4){
 	echo $info;
 }
 
+if($_POST['tipo']==6){
+	$info = $get -> getAddressDetail2($_POST['id']);
+	echo $info;
+}
+
 if($_POST['tipo']==5){
 	if($_POST['zip']>=10000){
 		$info = $get -> editddress($_POST['street'], $_POST['street2'], $_POST['zip'], $_POST['id']);

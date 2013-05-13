@@ -66,6 +66,22 @@ class Address {
 		}
 		return json_encode($all_recs);
 	}
+	
+	public function getAddressDetail2($id){
+		header('Content-type: application/json; charset=iso-8859-1');
+		include("conex.php");
+		$db = Conectarse();
+		$all_recs = array();
+		$stmt = $db->prepare("SELECT * FROM address where status_address = 1 and idAddress= ?");
+		if($stmt->execute(array($id))){
+			while($resp = $stmt->fetch()){
+				$all_recs[]=array('street' => $resp['street'], 'id' => $resp['idAddress'], 'street2' => $resp['street2'], 'zip' => $resp['zipcode'] );
+			}
+		}else{
+			$all_recs[]=array('resp' =>0);
+		}
+		return json_encode($all_recs);
+	}
 
 	function editddress($street, $street2, $zip, $id){
 		include("conex.php");
