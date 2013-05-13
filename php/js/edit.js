@@ -21,7 +21,11 @@ function editInfo(){
 		url:'bl/blCustomer.php',
 		data:{'tipo':5, 'first':first, 'last':last, 'email':email},
 		success: function(data){
-			location.reload();
+			if(data=="error"){
+				alert("Fill all inputs");
+			}else{
+				location.reload();
+			}
 		}
 	});
 }

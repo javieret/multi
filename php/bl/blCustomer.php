@@ -37,8 +37,14 @@ class blCustomer{
 		}
 
 		if($_POST['tipo']==5){
-			$info = $get -> editCusomter($_POST['first'], $_POST['last'], $_POST['email']);
-			echo $info;
+			session_start();
+			if(strlen($_POST['first'])>0 && strlen($_POST['last'])>0 && strlen($_POST['email'])>0){
+				$info = $get -> editCusomter($_POST['first'], $_POST['last'], $_POST['email'], $_SESSION['id']);
+				echo $info;
+			}else{
+				$info ="error";
+				echo $info;
+			}
 		}
 	}
 }
