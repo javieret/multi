@@ -17,12 +17,12 @@ function addCustomer(){
 				document.getElementById('email').value="";
 				console.log(data);
 				if(data==="error"){
-					alert("Completa los datos");
+					alert("Complete all the fields");
 				}
 			}
 		});
 	}else{
-		alert("Escribe algo");
+		alert("Complete all the fields");
 	}
 }
 

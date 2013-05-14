@@ -18,9 +18,13 @@ class blArticle{
 		}
 
 		if($_POST['tipo']==2){
-			$info = $get -> deleteArticle($_POST['article']);
-			if($info){
-				echo "Si se borro";
+			if(is_numeric($_POST['article'])){
+				$info = $get -> deleteArticle($_POST['article']);
+				if($info){
+					echo "Si se borro";
+				}else{
+					echo "No se borro";
+				}
 			}else{
 				echo "No se borro";
 			}

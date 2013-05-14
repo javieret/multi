@@ -13,9 +13,13 @@ class blArticletype{
 		}
 
 		if($_POST['tipo']==2){
-			$info = $get -> deleteArticletype($_POST['category']);
-			if($info){
-				echo "Si se borro";
+			if(is_numeric($_POST['article'])){
+				$info = $get -> deleteArticletype($_POST['category']);
+				if($info){
+					echo "Si se borro";
+				}else{
+					echo "No se borro";
+				}
 			}else{
 				echo "No se borro";
 			}

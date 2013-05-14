@@ -38,6 +38,7 @@ class Order {
 		if($stmt->execute()){
 			$idorder = $db->lastInsertId();
 			$this->addOrderDetail2($articles, $idorder);
+			//$this->sendSms();
 			return True;
 		}else{
 			return False;
@@ -120,6 +121,14 @@ class Order {
 			$stmt->execute();
 		}
 		return True;
+	}
+
+	public function sendSms(){
+		include_once( "NexmoMessage.php" );
+		$phone = "+5218114971245";
+		$place = 'Thank you for purchasing at Llama Clothes '.$_SESSION['email'];
+		$nexmo_sms = new NexmoMessage('d695d703', 'ad53e4c4');
+		$info = $nexmo_sms->sendText( $phone, 'Test', $place);
 	}
 	
 	public function deleteOrder($id){

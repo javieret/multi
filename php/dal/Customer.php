@@ -7,13 +7,11 @@ class Customer {
 		$id=0;
 		$type=1;
 		$status=1;
-		$random=md5(uniqid(rand(), true));
-		$hash=crypt($pass,'$2a$07$'.$random. '$');
 		$stmt = $db->prepare("INSERT INTO customer values (:id, :idtype, :user, :pass, :first, :last, :email, :status)");
 		$stmt->bindParam(':id',$id);
 		$stmt->bindParam(':idtype',$type);
 		$stmt->bindParam(':user',$user);
-		$stmt->bindParam(':pass',$hash);
+		$stmt->bindParam(':pass',$pass);
 		$stmt->bindParam(':first',$first);
 		$stmt->bindParam(':last',$last);
 		$stmt->bindParam(':email',$email);

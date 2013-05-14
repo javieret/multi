@@ -12,6 +12,7 @@ class Auth {
 	    	session_start();
 	    	$_SESSION['name']=$row['firstName'];
 	    	$_SESSION['id']=$row['idcustomer'];
+	    	$_SESSION['email']=$row['email'];
 	        return True;
 	    }
 	}

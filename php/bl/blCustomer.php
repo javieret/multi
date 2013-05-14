@@ -5,7 +5,9 @@ class blCustomer{
 		$get = new Customer();
 		if($_POST['tipo']==1){
 			if(isset($_POST['user'])&&($_POST['pass'])&&($_POST['first'])&&($_POST['last'])){
-				$info = $get -> addCustomer($_POST['user'],$_POST['pass'], $_POST['first'], $_POST['last'], $_POST['email']);
+				$random=md5(uniqid(rand(), true));
+				$hash=crypt($_POST['pass'],'$2a$07$'.$random. '$');
+				$info = $get -> addCustomer($_POST['user'],$hash, $_POST['first'], $_POST['last'], $_POST['email']);
 				if($info){
 					echo "Si se inserto";
 				}else{

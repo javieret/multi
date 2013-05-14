@@ -28,11 +28,19 @@ class blOrder{
 		}
 
 		if($_GET['tipo']==4){
-			session_start();
-			$carro = $_SESSION['carro'];
-			$info = $get ->addOrder2(1, $carro);
-			unset($_SESSION['carro']);
-			header("Location: ../thankyou.php");
+			if($_GET['address']>0){
+				session_start();
+				$carro = $_SESSION['carro'];
+				if(count($carro)>0){
+				$info = $get ->addOrder2($_GET['address'], $carro);
+				unset($_SESSION['carro']);
+				header("Location: ../thankyou.php");
+				}else{
+					header("Location: ../placeholder.php?error=1");
+				}
+			}else{
+				header("Location: ../placeholder.php?error=1");
+			}
 		}
 	}
 }

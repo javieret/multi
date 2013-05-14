@@ -4,7 +4,7 @@ $log =0;
 if (!isset($_SESSION["name"])){ 
   $log =1;
 }else{ 
- header("Location: bl/blOrder.php?tipo=4");
+ header("Location: bl/blOrder.php?tipo=4&address=".$_POST['add_address']);
 }
 ?>
 

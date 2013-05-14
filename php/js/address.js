@@ -52,12 +52,12 @@ function addAddress(){
 				document.getElementById('zip').value="";
 				console.log(data);
 				if(data==="error"){
-					alert("Completa los datos");
+					alert("Complete all the fields");
 				}
 			}
 		});
 	}else{
-		alert("Escribe algo");
+		alert("Complete all the fields");
 	}
 }
 
@@ -71,7 +71,7 @@ function getAddress(){
 		console.log(data);
 			for (var i=0;i<data.length;i++)
 			{
-				$("#add_address").append("<option>"+data[i].street+" "+data[i].street2+"</option>");
+				$("#add_address").append("<option value="+data[i].id+">"+data[i].street+" "+data[i].street2+"</option>");
 			}
 		}
 	});
@@ -87,7 +87,7 @@ function getAddressDetail(){
 		console.log(data);
 			for (var i=0;i<data.length;i++)
 			{
-				$("#add_address").append("<option>"+data[i].street+" "+data[i].street2+"</option>");
+				$("#add_address").append("<option value="+data[i].id+">"+data[i].street+" "+data[i].street2+"</option>");
 			}
 		}
 	});

@@ -4,11 +4,13 @@ class blCountry{
 		include ("../dal/Country.php");
 		$get = new Country();
 		if($_POST['tipo']==1){
-			$info = $get -> addCountry($_POST['country']);
-			if($info){
-				echo "Si se inserto";
-			}else{
-				echo "No se inserto";
+			if(strlen($_POST['country']>0)){
+				$info = $get -> addCountry($_POST['country']);
+				if($info){
+					echo "Si se inserto";
+				}else{
+					echo "No se inserto";
+				}
 			}
 			
 		}

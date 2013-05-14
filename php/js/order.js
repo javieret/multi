@@ -7,9 +7,6 @@ $(document).ready(function() {
 			for (var i=0;i<data.length;i++)
 			{
 				$("#direccion").append("<option value="+data[i].id+">"+data[i].street+"</option>");
-				//$("#direccion").append("<option value="+1+">"+'Monclova 1851'+"</option>");
-				//$("#articulos").append("<input id='articles' type='checkbox' name = 'articles' value="+1+">"+'camisa');
-				//$("#articulos").append("<input id='articles' type='checkbox' name = 'articles' value="+2+">"+'pantalon');
 			}
 		}
 	});
